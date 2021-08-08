@@ -1,0 +1,37 @@
+.videoCard{
+    color:#fff;
+    width:400px;
+    height:300px;
+    transition: transform 100ms ease-in;
+    margin:20px;
+    /* cursor: pointer; */
+    /* border:1px solid white; */
+}
+
+.imgContainer :hover{
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+.imgContainer > img{
+    height:200px;
+    width:100%;
+}
+
+.videoCard > h2{
+    margin-left:10px;
+    padding-top:10px;
+}
+
+.videoCard > p{
+    margin-top:6px;
+    margin-left:10px;
+}
+
+/* .videoCard_Stats{
+    display: none;
+}
+
+.videoCard :hover > .videoCard_Stats{
+    display: inline;
+} */
