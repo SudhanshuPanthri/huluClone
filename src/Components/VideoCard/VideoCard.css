@@ -1,16 +1,19 @@
 .videoCard{
     color:#fff;
     width:400px;
-    height:300px;
-    transition: transform 100ms ease-in;
+    height:340px;
     margin:20px;
     /* cursor: pointer; */
     /* border:1px solid white; */
 }
 
+.imgContainer{
+    transition: transform 50ms ease-in;
+}
+
 .imgContainer :hover{
     cursor: pointer;
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
 .imgContainer > img{
@@ -27,11 +30,3 @@
     margin-top:6px;
     margin-left:10px;
 }
-
-/* .videoCard_Stats{
-    display: none;
-}
-
-.videoCard :hover > .videoCard_Stats{
-    display: inline;
-} */

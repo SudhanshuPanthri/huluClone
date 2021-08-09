@@ -1,13 +1,13 @@
 import React from 'react'
 import './VideoCard.css'
 import TextTruncate from 'react-text-truncate'
-import { ThumbUpSharp } from '@material-ui/icons'
+import { forwardRef } from 'react'
 
 const baseUrl = "https://image.tmdb.org/t/p/original/"
 
-function VideoCard({ movie }) {
+const VideoCard = forwardRef(({ movie }, ref) => {
     return (
-        <div className='videoCard'>
+        <div ref={ref} className='videoCard'>
             <div className="imgContainer">
                 <img src={`${baseUrl}${movie.backdrop_path || movie.poster_path}`} alt={movie.title} />
             </div>
@@ -19,12 +19,14 @@ function VideoCard({ movie }) {
                 text={movie.overview} />
             <h2>{movie.title}</h2>
             <p className='videoCard_Stats'>
-                {movie.media_type && `${movie.media_type} :`}
+                {/* {movie.media_type && `${movie.media_type} :`} */}
+                {`RELEASE DATE : `}
                 {movie.release_date || movie.first_air_date}
-                <span>{` - `}</span>
-                <ThumbUpSharp />{movie.vote_count}</p>
+                {/* <span>{` - `}</span> */}
+            </p>
+            <p>{`NO. OF LIKES : `}{movie.vote_count}</p>
         </div>
     )
-}
+})
 
 export default VideoCard
